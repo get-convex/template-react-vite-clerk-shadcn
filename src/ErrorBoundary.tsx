@@ -33,7 +33,9 @@ export class ErrorBoundary extends Component<
             {clerkDashboardUrl ? (
               <p>
                 You can find it at{" "}
-                <Link href={clerkDashboardUrl}>{clerkDashboardUrl}</Link>
+                <Link href={clerkDashboardUrl} target="_blank">
+                  {clerkDashboardUrl}
+                </Link>
               </p>
             ) : null}
             <p className="pl-8 text-muted-foreground">Raw error: {errorText}</p>

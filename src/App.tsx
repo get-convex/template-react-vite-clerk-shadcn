@@ -12,10 +12,10 @@ export default function App() {
   return (
     <main className="container max-w-2xl flex flex-col gap-8">
       <h1 className="text-4xl font-extrabold my-8 text-center">
-        Convex + React (Vite) + Clerk
+        Convex + React (Vite) + Clerk Auth
       </h1>
       <Authenticated>
-        <App_ />
+        <SignedIn />
       </Authenticated>
       <Unauthenticated>
         <div className="flex justify-center">
@@ -28,7 +28,7 @@ export default function App() {
   );
 }
 
-function App_() {
+function SignedIn() {
   const { numbers, viewer } =
     useQuery(api.myFunctions.listNumbers, {
       count: 10,
